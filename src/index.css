@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+  }
+}
+
+/* Custom sleek studio scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(161, 161, 170, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(161, 161, 170, 0.35);
+}
+
+/* Range input clean dark styling */
+input[type="range"] {
+  accent-color: #FFD100;
+}
+
+/* Light-mode adaptation for deep nested inspector inputs & cards */
+html:not(.dark) .inspector-adaptive .bg-zinc-950,
+html:not(.dark) .inspector-adaptive [class*="bg-zinc-950/"] {
+  background-color: #f4f4f5;
+}
+
+html:not(.dark) .inspector-adaptive .bg-zinc-900,
+html:not(.dark) .inspector-adaptive [class*="bg-zinc-900/"] {
+  background-color: #ffffff;
+}
+
+html:not(.dark) .inspector-adaptive .bg-zinc-800 {
+  background-color: #e4e4e7;
+  color: #18181b;
+}
+
+html:not(.dark) .inspector-adaptive .bg-zinc-700 {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+html:not(.dark) .inspector-adaptive .border-zinc-800,
+html:not(.dark) .inspector-adaptive [class*="border-zinc-800/"],
+html:not(.dark) .inspector-adaptive .border-zinc-700 {
+  border-color: #d4d4d8;
+}
+
+html:not(.dark) .inspector-adaptive .text-white,
+html:not(.dark) .inspector-adaptive .text-zinc-100,
+html:not(.dark) .inspector-adaptive .text-zinc-200,
+html:not(.dark) .inspector-adaptive .text-zinc-300 {
+  color: #18181b;
+}
+
+html:not(.dark) .inspector-adaptive .text-zinc-400,
+html:not(.dark) .inspector-adaptive .text-zinc-500 {
+  color: #52525b;
+}
+
+html:not(.dark) .inspector-adaptive .text-\[\#FFD100\] {
+  color: #b45309;
+}
+
+html:not(.dark) .inspector-adaptive [class*="bg-\[\#FFD100\]/"] {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #d97706;
+}
+
